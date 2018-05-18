@@ -1,0 +1,50 @@
+<div class="row" style="margin-top:30px">
+    <div class="col m6 offset-m3">
+        <div class="card">
+            <div class="card-content">
+                <h5>ユーザ情報</h5>
+                
+                <p style="font-size: 11px">メールアドレスの変更はできません。</p>
+                <P style="font-size: 11px">パスワードを変更する場合はすべてのフォームを記入してください。</P>
+                
+                
+        
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                  <%= render partial: "shared/devisemessage" %>
+                
+                  <div class="input-field">
+                    <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
+                  </div>
+                
+                  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                  <% end %>
+                
+                  <div class="input-field">
+                    <%= f.password_field :password, placeholder: "新しいパスワード", autocomplete: "off" %>
+                  </div>
+                
+                  <div class="input-field">
+                    <%= f.password_field :password_confirmation, placeholder: "確認用パスワード", autocomplete: "off" %>
+                  </div>
+                
+                  <div class="input-field">
+                    <%= f.password_field :current_password, placeholder: "変更前パスワード", autocomplete: "off" %>
+                  </div>
+                
+                  <button class="btn waves-effect waves-light" type="submit" name="action" style="margin-bottom:10px">更新する</button>
+                <% end %>
+                
+                
+                
+                <%= button_to "退会する", registration_path(resource_name), data: { confirm: "本当に退会しますか？" }, method: :delete, class: "btn waves-effect waves-light white" %>
+                
+                
+
+            </div>
+        </div>
+    </div>
+</div> 
+ 
+ 
+        

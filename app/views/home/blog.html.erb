@@ -1,0 +1,136 @@
+
+  
+<div class="cover #eceff1 blue-grey lighten-5">
+
+
+  <div class="carousel carousel-slider center " data-indicators="true">
+    
+    <div class="carousel-fixed-item center middle-indicator">
+     <div class="left">
+      <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left  middle-indicator-text">chevron_left</i></a>
+     </div>
+     
+     <div class="right">
+     <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+     </div>
+    </div>
+    
+    <div class="carousel-item white-text" href="#one">
+       <%= image_tag 'blog.jpg', :height => '400', :style => 'opacity: 0.9' %>
+    </div>
+    <div class="carousel-item white-text" href="#two!">
+       <%= image_tag 'header.jpg', :height => '400' %>
+    </div>
+  </div>
+  
+</div>
+
+<main role="main" class="container">
+      <div class="row">
+        <div class="col m8">
+
+           <div class="row" style="padding-top: 42px">
+              <div class="col s12">
+                <ul class="tabs">
+                  <li class="tab col s3"><a href="#test1">ブログ</a></li>
+                  <li class="tab col s3"><a href="#test2">書評</a></li>
+                </ul>
+              </div>
+              
+              <div id="test1" class="col s12">
+                <ul class="collection">
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle">folder</i>        
+                  </li>
+                </ul>
+                
+                <ul class="collection">
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle">folder</i>        
+                  </li>
+                </ul>
+              </div>
+              
+              <div id="test2" class="col s12">
+                <ul class="collection">
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle">folder</i>
+                  </li>
+                </ul>
+                
+              </div>
+              
+            
+          </div>
+
+        
+
+        </div><!-- /.blog-main -->
+
+        <div class="col m4" style="padding-left:50px; margin-top: 35px">
+      
+            <h5 style="border-bottom:1px solid black">ABOUT</h5>
+            <p>LIGHT BULBのメンバーが定期的にブログ、書評などをアップロードしていきます。気に入った記事があればSNSでシェアをしていただければ幸いです！</p>
+        
+
+          <div class="p-3">
+            <h5 style="border-bottom:1px solid black">CATEGORY</h5>
+          
+              <li><a href="#">船越の投稿</a></li>
+              <li><a href="#">濱崎の投稿</a></li>
+              <li><a href="#">西村の投稿</a></li>
+              <li><a href="#">Mameudaの投稿</a></li>
+              
+             
+            
+          </div>
+
+          <div class="p-3">
+            <h5 style="border-bottom:1px solid black">FOLLOW US</h5>
+    
+              <li><a href="https://www.facebook.com/LIGHT-BULB-367843677038181/">Facebook</a></li>
+              <li><a href="https://twitter.com/LightBulb_tufs">Twitter</a></li>
+            
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+   $('.carousel.carousel-slider').carousel({
+      fullWidth: true,
+      indicators: false
+   });
+
+
+   // move next carousel
+   $('.moveNextCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('next');
+   });
+
+   // move prev carousel
+   $('.movePrevCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('prev');
+   });
+</script>
+
+
+ 

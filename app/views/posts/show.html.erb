@@ -1,0 +1,106 @@
+
+  
+<div class="cover #eceff1 blue-grey lighten-5">
+
+
+  <div class="carousel carousel-slider center " data-indicators="true">
+    
+    <div class="carousel-fixed-item center middle-indicator">
+     <div class="left">
+      <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left  middle-indicator-text">chevron_left</i></a>
+     </div>
+     
+     <div class="right">
+     <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+     </div>
+    </div>
+    
+    <div class="carousel-item white-text" href="#one">
+       <%= image_tag 'blog.jpg', :height => '400', :style => 'opacity: 0.9' %>
+    </div>
+    <div class="carousel-item white-text" href="#two!">
+       <%= image_tag 'header.jpg', :height => '400' %>
+    </div>
+  </div>
+  
+</div>
+
+<main role="main" class="container">
+      <div class="row">
+        <% date = @post.created_at.strftime("%Y年 %m月 %d日") %>
+        <div class="col m8 posting" style="padding-top: 55px">
+            <h4><%= @post.title %></h4>
+            <p class="valign-wrapper"><i class="material-icons">person</i>&nbsp;<%= @post.user.name %></p>
+            <p class="valign-wrapper"><i class="material-icons">access_time</i>&nbsp;<%= date %></p>
+            <HR>
+            <%= sanitize @post.content, :tags => %w(p br span h1 h2 h3 h4 h5 blockquote img), :attributes => %w(style src) %>
+         </div>
+
+    
+    
+        <div class="col m4" style="padding-left:50px; margin-top: 35px">
+          <div class="p-3">
+            <h5 style="border-bottom:2px solid #BBBBBB; opacity: 0.8!important;">ABOUT</h5>
+            <p>LIGHT BULBのメンバーが定期的にブログ、書評などをアップロードしていきます。気に入った記事があればSNSでシェアをしていただければ幸いです！</p>
+          </div>
+
+          <div class="p-3">
+            <h5 style="border-bottom:2px solid #BBBBBB">CATEGORY</h5>
+          
+              <li><a href="#">船越の投稿</a></li>
+              <li><a href="#">濱崎の投稿</a></li>
+              <li><a href="#">西村の投稿</a></li>
+              <li><a href="#">Mameudaの投稿</a></li>
+              
+             
+            
+          </div>
+
+<!-- delete margin later-->
+          <div class="p-3" style="margin-bottom: 100px;">
+            <h5 style="border-bottom:2px solid #BBBBBB">FOLLOW US</h5>
+    
+              <li><a href="https://www.facebook.com/LIGHT-BULB-367843677038181/">Facebook</a></li>
+              <li><a href="https://twitter.com/LightBulb_tufs">Twitter</a></li>
+            
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+   $('.carousel.carousel-slider').carousel({
+      fullWidth: true,
+      indicators: false
+   });
+
+
+   // move next carousel
+   $('.moveNextCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('next');
+   });
+
+   // move prev carousel
+   $('.movePrevCarousel').click(function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      $('.carousel').carousel('prev');
+   });
+</script>
+

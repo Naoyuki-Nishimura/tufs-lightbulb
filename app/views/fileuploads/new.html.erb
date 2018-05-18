@@ -1,0 +1,17 @@
+
+
+<div class="row" style="margin-top:25px">
+	<div class="col m4 offset-m4">
+		<div class="card #ffc400 amber accent-3">
+		<div class="card-content">
+		<h4 style="margin-bottom:50px; opacity: 0.8">PDFを投稿する</h4>
+			
+		<%= form_tag '/fileuploads', method: 'post', multipart: true do %>
+	    	<%= file_field :fileupload, :file %>
+		    <%= submit_tag '送信' %>
+		<% end %>
+		<%= image_tag 'bulb.png', :size => '400x400', :style => 'margin-top: 20px' %>
+		</div>
+		</div>
+	</div>
+</div>

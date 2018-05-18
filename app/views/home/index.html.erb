@@ -1,0 +1,27 @@
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag("header2.jpg") %></div>
+    <div class="container">
+      <div class="top white-text center" style="opacity: 0.8; margin-top: 160px">
+          <h3 id="target">自分のキャリアを見つめる</h3>
+          <p>私たちは東京外大卒の起業家に取材し、外大生の皆さんと共有すべく活動しています。</p>
+          <%= link_to "ジョイン", new_user_registration_path, class: "round waves-effect waves-light btn-large z-depth-4 #ff5252 red accent-2" %>
+      </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    }); 
+</script>
+
+<script>
+  $(function() {
+  // 「#login-show」要素に対するclickイベントを作成してください
+  $("#login-show").click(function() {
+    $('#login-modal').fadeIn();
+  });
+  
+});
+</script>

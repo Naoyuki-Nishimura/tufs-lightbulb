@@ -1,0 +1,113 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *= require_directory .
+ *= require_self
+ */
+ 
+@import "toastr";
+
+
+
+body {
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+}
+
+main {
+flex: 1 0 auto;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+.top {
+    p {
+        margin-top: 40px;
+    }
+    
+    a {
+        margin-top: 45px;
+    }
+}
+
+.parallax-container {
+  height: 560px!important;
+}
+
+.fab {
+    padding-bottom: 10px;
+}
+
+
+
+/* just for jsfiddle */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v18/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.middle-indicator{
+   position:absolute;
+   top:50%;
+   }
+  .middle-indicator-text{
+   font-size: 4.2rem;
+  }
+  a.middle-indicator-text{
+    color:white !important;
+  }
+.content-indicator{
+    width: 64px;
+    height: 64px;
+    background: none;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px; 
+  }
+    .indicators{
+  	visibility: hidden;
+    }
+
+
+
+
+.posting {
+    word-wrap: break-all;
+    word-break: break-all;
+}
+
+.p-3 {
+    h5 {
+        opacity: 0.8;
+    }
+}
+
