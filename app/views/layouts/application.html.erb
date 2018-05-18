@@ -41,8 +41,8 @@
   <% end %>
   
   <ul class="sidenav" id="mobile-demo"> <!-- for smartphone view  -->
-    <li><a href="#!">MyPage</a></li>
-    <li><a href="#!">記事一覧</a></li>
+    <li><%= link_to 'MyPage', '/home/edit_user', :style => "color: white!important" %></li>
+    <!-- devide -->
     <li class="divider"></li>
     <li><%= link_to 'About Us', '/home/about' %></li>
     <li><a href="#">取材</a></li>
@@ -69,7 +69,7 @@
         <ul class="right hide-on-med-and-down">
           <li><%= link_to 'About Us', '/home/about' %></li>
           <li><%= link_to 'ブログ', posts_path %></li>
-          <li><a href="badges.html">取材</a></li>
+          <li><a href="#">取材</a></li>
   
           <% unless user_signed_in? %>
             <li><%= link_to "新規登録", new_user_registration_path %></li>
