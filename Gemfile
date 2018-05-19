@@ -32,8 +32,6 @@ gem 'rails-i18n'
 
 gem 'activeadmin_quill_editor'
 
-gem 'paperclip'
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

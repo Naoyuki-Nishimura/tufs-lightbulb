@@ -43,7 +43,7 @@
         
        <li><%= link_to 'MyPage', '/home/edit_user', :style => "color: white!important" %></li>
         
-       <!--<li><a href="#!" style="color: white!important">記事一覧</a></li> -->
+       <!-- <li><a href="#!" style="color: white!important">記事一覧</a></li> -->
         <% if current_user.role == 'admin' %>
           <li><%= link_to 'Post PDF', '/fileuploads/new', :style => 'color: white!important' %></li>
         <% end %>
@@ -57,7 +57,7 @@
     <!-- devide -->
     <li class="divider"></li>
     <li><%= link_to 'About Us', '/home/about' %></li>
-    <li><%= link_to '取材', interviews_path %></li>
+    <li><a href="#">取材</a></li>
     <li><%= link_to 'ブログ', posts_path %></li>
     
     <% unless user_signed_in? %>
@@ -81,7 +81,7 @@
         <ul class="right hide-on-med-and-down">
           <li><%= link_to 'About Us', '/home/about' %></li>
           <li><%= link_to 'ブログ', posts_path %></li>
-          <li><%= link_to '取材', interviews_path %></li>
+          <li><a href="#">取材</a></li>
   
           <% unless user_signed_in? %>
             <li><%= link_to "新規登録", new_user_registration_path %></li>
