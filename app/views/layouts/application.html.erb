@@ -29,8 +29,9 @@
   <% if user_signed_in? %>
   <!-- Dropdown Structure -->
       <ul id="dropdown1" class="dropdown-content #4e342e brown darken-3">
-       
-        <li><%= link_to 'MyPage', '/home/edit_user', :style => "color: white!important" %></li>
+        
+       <li><%= link_to 'MyPage', '/home/edit_user', :style => "color: white!important" %></li>
+        
        <!-- <li><a href="#!" style="color: white!important">記事一覧</a></li> -->
         <% if current_user.role == 'admin' %>
           <li><%= link_to 'Post PDF', '/fileuploads/new', :style => 'color: white!important' %></li>
