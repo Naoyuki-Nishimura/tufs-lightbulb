@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
 
   
+  resources :interviews, :only => [:new, :index, :create]
   
-  get 'fileuploads/index'
-
-  get 'fileuploads/create'
-
-  get 'fileuploads/new'
 
   ActiveAdmin.routes(self)
   
@@ -27,6 +23,8 @@ Rails.application.routes.draw do
   get 'home/about' => 'home#about'
   
   get 'home/blog' => 'home#blog'
+  
+ 
   
   
   

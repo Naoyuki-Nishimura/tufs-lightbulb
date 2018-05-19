@@ -1,0 +1,5 @@
+<%= form_for  @interview, url: interviews_path do |f| %>
+  <%= f.text_field :name %>
+  <%= f.file_field :pdf %>
+  <%= f.submit %>
+<% end %>
