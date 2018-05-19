@@ -1,0 +1,10 @@
+<% @interviews.each do |pdf| %>
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <% path = pdf.pdf_file_name %>
+            <%= link_to pdf.name, asset_path("#{path}") %>
+        </div>
+    </div>
+</div>
+<% end %>

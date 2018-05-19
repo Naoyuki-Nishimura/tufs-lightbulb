@@ -2,11 +2,7 @@ Rails.application.routes.draw do
 
   
   
-  get 'fileuploads/index'
-
-  get 'fileuploads/create'
-
-  get 'fileuploads/new'
+  resources :interviews, :only => [:new, :create, :index]
 
   ActiveAdmin.routes(self)
   
