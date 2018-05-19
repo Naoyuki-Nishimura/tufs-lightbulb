@@ -20,6 +20,6 @@ class Interview < ActiveRecord::Base
     
     
     has_attached_file :pdf,
-    path: "#{Rails.root}/app/assets/pdfs/:filename"
+    path: "#{Rails.root}/app/assets/:filename"
     validates_attachment :pdf, :content_type => { :content_type => %w(application/pdf application/msword) }
 end
