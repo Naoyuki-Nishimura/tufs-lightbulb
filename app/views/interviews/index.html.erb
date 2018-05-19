@@ -1,14 +1,17 @@
 <% @interviews.each do |pdf| %>
+
 <div class="container">
     <div class="card #efebe9 brown lighten-5">
         <div class="card-content ">
             <li class="collection-item valign-wrapper ">
-                <% path = pdf.pdf_file_name %>
-                <i class="material-icons">person</i>
-                <%= link_to pdf.name, asset_path("#{path}") %>
+                
+                <i class="material-icons">person</i>&emsp; 
+                <%= link_to pdf.name, "/pdf2/#{pdf.pdf_file_name}" %>
             </li>
             
         </div>
     </div>
 </div>
 <% end %>
+
+
