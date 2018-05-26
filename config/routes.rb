@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   
   
-  resources :events, only => [:new, :create]
+  resources :events
 
   resources :interviews, :only => [:new, :create, :index]
 
