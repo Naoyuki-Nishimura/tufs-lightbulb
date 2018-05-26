@@ -1,0 +1,54 @@
+<%= render partial: "shared/message" %>
+
+<div class="container">
+  <div class="row"  style="margin-top:40px">
+    
+    
+    <div class="col s12 m6">
+        <div class="card green">
+          <div class="card-content" style="color:white">
+            <p>6月7日　イベント詳細</p>
+            <hr>
+            <p>６/7の５限後に学内で当団体のメンバーより詳しい活動を説明します！
+              それと同時に一緒に活動をしてくれる学生を大募集！
+              開催場所については後程ご連絡します！！！
+            </p><br>
+            <p>あらかじめ参加人数を把握しておきたいため、参加を希望する方は右のフォームから予約をお願いします！</p>
+          </div>        
+        </div>
+    </div>
+    
+
+    
+    
+
+    <div class="col s12 m6">
+    <%= form_for(@event) do |f| %>    
+      <div class="center"><h5 style="font-size:17px">イベントに参加する</h5></div>
+      <div class="row">
+        <div class="input-field col s12 m10 offset-m1">
+         <%= f.text_field :name, placeholder: "お名前" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m10 offset-m1">
+          <%= f.text_field :email, placeholder: "Eメール (必須ではありません)" %>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s12 m10 offset-m1">
+          <%= f.text_field :grade, placeholder: "学年" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m10 offset-m1">
+          <%= f.text_field :language, placeholder: "専攻語" %>
+        </div>
+      </div>
+        <button class="btn waves-effect waves-light #00695c teal darken-3" type="submit" name="action" style="margin-bottom: 10px; margin-left:60px">予約する</button>
+      <% end %>
+    </div>
+
+</div>
+         
+</div>

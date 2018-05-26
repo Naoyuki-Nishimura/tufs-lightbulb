@@ -57,6 +57,7 @@
     <!-- devide -->
     <li class="divider"></li>
     <li><%= link_to 'About Us', '/home/about' %></li>
+    <li><%= link_to 'イベント', new_event_path  %></li>
     <li><%= link_to '取材', interviews_path %></li>
     <li><%= link_to 'ブログ', posts_path %></li>
     
@@ -80,8 +81,10 @@
         
         <ul class="right hide-on-med-and-down">
           <li><%= link_to 'About Us', '/home/about' %></li>
+          <li><%= link_to 'イベント', new_event_path  %></li>
           <li><%= link_to 'ブログ', posts_path %></li>
           <li><%= link_to '取材', interviews_path %></li>
+        
   
           <% unless user_signed_in? %>
             <li><%= link_to "新規登録", new_user_registration_path %></li>
