@@ -48,7 +48,7 @@
           <li><%= link_to 'Post PDF', '/fileuploads/new', :style => 'color: white!important' %></li>
         <% end %>
         <li class="divider"></li>
-        <li><%= link_to 'サインアウト', destroy_user_session_path, method: :delete, style: "color: orange!important" %></li>
+        <li><%= link_to 'サインアウト', destroy_user_session_path, method: :delete, style: "color: white!important" %></li>
       </ul>
   <% end %>
   
@@ -68,7 +68,7 @@
     
     <% if user_signed_in? %>
       <li class="divider"></li>
-       <li><%= link_to 'サインアウト', destroy_user_session_path, method: :delete, style: "color: orange!important" %></li>
+       <li><%= link_to 'サインアウト', destroy_user_session_path, method: :delete, style: "color: black!important" %></li>
     <% end %>
   </ul>
   <!-- Dropdown Structure end -->
