@@ -1,0 +1,14 @@
+development:
+    bucket: 'lightbulb-photo'
+    access_key_id: 'AKIAJW7RKHK6BXITPPKA'
+    secret_access_key: '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'
+    s3_host_name: 's3-ap-northeast-1.amazonaws.com'
+    s3_region: 'ap-northeast-1'  
+
+
+production: 
+    bucket: 'lightbulb-photo'
+    access_key_id: 'AKIAJW7RKHK6BXITPPKA'
+    secret_access_key: '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'
+    s3_host_name: 's3-ap-northeast-1.amazonaws.com'
+    s3_region: 'ap-northeast-1'  

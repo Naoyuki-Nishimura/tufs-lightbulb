@@ -20,7 +20,13 @@ class Interview < ActiveRecord::Base
     
     
     has_attached_file :pdf,
-    path: "#{Rails.root}/public/pdf2/:filename"
-    validates_attachment :pdf, :content_type => { :content_type => %w(application/pdf application/msword) }
+      :storage => :s3,
+      :s3_credentials => "#{Rails.root}/config/s3.yml",
+      :path => ":attachment/:id/:style.:extension",
+      :s3_host_name => 's3-ap-northeast-1.amazonaws.com'
+      validates_attachment :pdf, :content_type => { :content_type => %w(application/pdf application/msword) }
+   
+   
+    
 end
 

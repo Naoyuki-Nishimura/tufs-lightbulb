@@ -1,4 +1,4 @@
-<% @interviews.each do |pdf| %>
+<% @interviews.each do |interview| %>
 
 <div class="container">
     <div class="card #efebe9 brown lighten-5">
@@ -6,7 +6,9 @@
             <li class="collection-item valign-wrapper ">
                 
                 <i class="material-icons">person</i>&emsp; 
-                <%= link_to pdf.name, "/pdf2/#{pdf.pdf_file_name}", :style => "color: black!important; opacity:0.8" %>
+                <!-- link_to interview.name, interview.pdf.url -->
+                <%= link_to interview.name, interview.pdf.url %>
+                <!-- link_to pdf.name, "/pdf2/#{pdf.pdf_file_name}", :style => "color: black!important; opacity:0.8" -->
             </li>
             
         </div>
