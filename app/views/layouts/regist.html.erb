@@ -26,34 +26,32 @@
 
 
 
-<main class= "#fafafa grey lighten-5" style="padding-bottom:0; margin-bottom:0">
+<main class= "#212121 grey darken-4" style="padding-bottom:0; margin-bottom:0">
     <div class="row" style="margin-bottom:0;padding-bottom:0;">
         
-        <div class="col m7" style="padding-left: 0;">
-            <%= image_tag 'background.png', :height => "632", :width => "700" %>
-        </div>
+       
         
         
-          <div class="col m5" style="padding-top: 100px">
-              
-              <h6 class="center" style="opacity: 0.9; font-family: 'Cursive'; font-size: 19px ">新規登録</h6>
+          <div class="col s12 m6 offset-m3" style="padding-top: 100px">
+            <div class="container">  
+              <h6 class="center" style="opacity: 0.9; font-family: 'Cursive'; font-size: 19px; color:white ">新規登録</h6>
               
               <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                 <%= render partial: "shared/devisemessage" %>    
                   
-                <div class="input-field">
+                <div class="input-field #757575 grey darken-1">
                   <%= f.text_field :name, placeholder: "お名前", autocomplete: "name", :class => "validate" %>
                 </div>              
               
-                <div class="input-field">
+                <div class="input-field #757575 grey darken-1">
                   <%= f.email_field :email, placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
                 </div>
               
-                <div class="input-field">
+                <div class="input-field #757575 grey darken-1">
                   <%= f.password_field :password, placeholder: "パスワード", autocomplete: "off" %>
                 </div>
               
-                <div class="input-field">
+                <div class="input-field #757575 grey darken-1">
                   <%= f.password_field :password_confirmation, placeholder: "パスワード再確認", autocomplete: "off" %>
                 </div>
               
@@ -62,7 +60,7 @@
               
               <%= render "devise/shared/links" %>
           </div>
-        
+        </div>
     </div>
 </main>
 
