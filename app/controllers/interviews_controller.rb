@@ -1,4 +1,7 @@
 class InterviewsController < ApplicationController
+  
+  before_action :authenticate_user!
+  
   def new
     @interview= Interview.new
   end
@@ -7,7 +10,7 @@ class InterviewsController < ApplicationController
     @interview = Interview.new(interview_params)
     
     if @interview.save
-      redirect_to root_path
+      redirect_to @interview, notice: 'Friend was successfully created.'
     end
   end
 
@@ -18,7 +21,7 @@ class InterviewsController < ApplicationController
   private
   
   def interview_params
-    params.require(:interview).permit(:pdf)
+    params.require(:interview).permit(:pdf, :name)
   end
   
 end
