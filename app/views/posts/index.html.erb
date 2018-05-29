@@ -39,13 +39,18 @@
            
               <div id="test1" class="col s12">
                    <% @posts.each do |post| %>
-                    <ul class="collection">
-                      <li class="collection-item valign-wrapper">
-                        <%= image_tag 'logo.jpg', :size => '28x28', :class => 'circle responsive-circle' %>&emsp;   
-                    <!-- insert title -->
-                        <%= link_to post.title, post_path(post) %>
-                      </li>
-                    </ul>
+                  
+                        <ul class="collection">
+                          <li class="collection-item valign-wrapper">
+                        <!-- insert image -->
+                          <% if post.user %>
+                            <%= image_tag post.user.avatar.url(:thumb), :class => 'circle responsive-img' %>&emsp;   
+                        <!-- insert title -->
+                          <% end %>
+                            <%= link_to post.title, post_path(post) %>
+                          </li>
+                        </ul>
+                  
                   <% end %>
               </div>
                     

@@ -93,7 +93,9 @@
           <% end %>
         
           <% if user_signed_in? %>
-              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a class="dropdown-trigger valign-wrapper" href="#!" data-target="dropdown1">
+                <%= image_tag(current_user.avatar.url(:thumb), :class => "circle responsive-img", :style => "margin-right:10px" ) %>
+                <%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a></li>
           <% end %>
         </ul>
     </div>

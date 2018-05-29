@@ -12,7 +12,7 @@ ActiveAdmin.register User do
 #   permitted
 # end
 
-permit_params :email, :name, :password, :role
+permit_params :email, :name, :password, :role, :avatar
 
 index do
     selectable_column
@@ -32,6 +32,7 @@ form do |f|
     f.inputs '新規ユーザー登録' do
         f.input :email
         f.input :name
+        f.input :avatar, as: :file
         f.input :password
         f.input :password_confirmation
         f.input :role

@@ -24,6 +24,10 @@
 #  updated_at             :datetime         not null
 #  role                   :integer          default(0), not null
 #  name                   :string
+#  avatar_file_name       :string
+#  avatar_content_type    :string
+#  avatar_file_size       :integer
+#  avatar_updated_at      :datetime
 #
 
 class User < ActiveRecord::Base
@@ -39,7 +43,18 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :password, length: { minimum: 5 }
   
-  has_many :posts, :dependent => :destroy
+  has_many :posts, inverse_of: :user
+  
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "35x35>" }, 
+      :storage => :s3,
+      :s3_credentials => "#{Rails.root}/config/s3.yml",
+      :path => ":attachment/:id/:style.:extension",
+      :s3_host_name => 's3-ap-northeast-1.amazonaws.com',
+      :default_url => "missing.png"
+
+       
+  
+  validates_attachment :avatar, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   
   
 end
