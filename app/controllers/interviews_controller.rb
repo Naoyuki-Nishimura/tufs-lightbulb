@@ -15,7 +15,7 @@ class InterviewsController < ApplicationController
   end
 
   def index
-    @interviews = Interview.all
+    @interviews = Interview.all.order(created_at: :desc)
   end
   
   private
