@@ -1,14 +1,20 @@
+<% if not user_signed_in? %>
+    <% notify = "※記事を読むにはログインが必要です" %>
+    <p style="color: red"><%= notify %></p>
+<% end %>
+
 <% @interviews.each do |interview| %>
 
 <div class="container">
     <div class="card #efebe9 brown lighten-5">
         <div class="card-content ">
             <li class="collection-item valign-wrapper ">
-                
+              
                 <i class="material-icons">person</i>&emsp; 
                 <!-- link_to interview.name, interview.pdf.url -->
-                <%= link_to interview.name, interview.pdf.url %>
+                <%= link_to_if user_signed_in?, interview.name, interview.pdf.url %>
                 <!-- link_to pdf.name, "/pdf2/#{pdf.pdf_file_name}", :style => "color: black!important; opacity:0.8" -->
+                  
             </li>
             
         </div>

@@ -26,7 +26,5 @@ class Interview < ActiveRecord::Base
       :s3_host_name => 's3-ap-northeast-1.amazonaws.com'
       validates_attachment :pdf, :content_type => { :content_type => %w(application/pdf application/msword) }
    
-   
-    
 end
 
