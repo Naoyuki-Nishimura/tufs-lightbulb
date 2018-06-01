@@ -12,8 +12,11 @@ Rails.application.routes.draw do
   
  
   
-  
   resources :posts, :only => [:index, :show]  
+  
+  resources :posts do
+    resources :feedbacks, only: [:create, :destroy]
+  end
   
   
   resources :fileuploads, only: [:create, :new]

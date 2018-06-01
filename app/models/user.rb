@@ -44,6 +44,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 5 }
   
   has_many :posts, inverse_of: :user
+  has_many :feedbacks
   
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "35x35>" }, 
       :storage => :s3,

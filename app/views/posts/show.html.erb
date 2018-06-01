@@ -1,4 +1,4 @@
-
+<%= render partial: "shared/message" %>
   
 <div class="cover #eceff1 blue-grey lighten-5">
 
@@ -30,10 +30,18 @@
         <% date = @post.created_at.strftime("%Y年 %m月 %d日") %>
         <div class="col m8 posting" style="padding-top: 55px">
             <h4><%= @post.title %></h4>
-            <p class="valign-wrapper"><i class="material-icons">person</i>&nbsp;<%= @post.user.name %></p>
+            <p class="valign-wrapper">
+                <% if @post.user %>
+                    <%= image_tag @post.user.avatar.url(:thumb), size: "24x24", :class => 'circle responsive-img' %>&nbsp;
+                <% end %>   
+                    <%= @post.user.name %></p>
             <p class="valign-wrapper"><i class="material-icons">access_time</i>&nbsp;<%= date %></p>
             <HR>
-            <%= sanitize @post.content, :tags => %w(p br span h1 h2 h3 h4 h5 blockquote img), :attributes => %w(style src) %>
+            <%= sanitize @post.content, :tags => %w(pre p br span h1 h2 h3 h4 h5 blockquote img strong u em), :attributes => %w(style src) %>
+            <HR>
+            <h5 style="margin-top:70px; font-size: 18px; font-family: helvetic;font-weight:500">レビュー&nbsp; &nbsp;[ <%= @feedbacks.count %>件 ]</h5>
+            <%= render 'feedbacks/form' %>
+            <%= render 'feedbacks/list' %>
          </div>
 
     

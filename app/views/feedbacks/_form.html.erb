@@ -1,0 +1,10 @@
+<%= form_for([@post, @post.feedbacks.new]) do |f| %>
+
+    <div class="input-field">
+        <%= f.text_area :description, style: "height:150px", placeholder: "文字制限は400字までです。" %>
+    </div>
+    
+    <%= f.hidden_field :post_id, value: @post.id %>
+    
+    <button class="btn waves-effect waves-light red" type="submit" name="action">投稿</button>
+<% end %>

@@ -12,8 +12,7 @@
 
 class Post < ActiveRecord::Base
   belongs_to :user, inverse_of: :posts
-  
-  
+  has_many :feedbacks
   
   
   validates :title, :content, :user_id, presence: true 

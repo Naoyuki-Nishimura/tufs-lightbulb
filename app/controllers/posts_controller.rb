@@ -8,6 +8,8 @@ class PostsController < ApplicationController
     end
     
     def show
+        @feedbacks = @post.feedbacks.all
+       # @currentUserFeedback = @feedbacks.find_by(id: current_user.id) if current_user
         
     end
     

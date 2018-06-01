@@ -25,7 +25,7 @@ end
               data: {
                   options: {
                       modules: {
-                          toolbar: [[{ header: [1, 2, false] }], ['bold', 'italic', 'underline'], ['link'], ['image', 'code-block', 'blockquote'], [{ 'list': 'ordered'}, { 'list': 'bullet' }], [{ 'indent': '-1'}, { 'indent': '+1' }], [{ 'color': [] }, { 'background': [] }], [{ 'font': [] }], [{ 'align': [] }], ['clean']] }, placeholder: '※今のところ画像挿入はできないので注意', theme: 'snow'}}}
+                          toolbar: [[{ header: [1, 2, false] }], ['bold', 'italic', 'underline'], ['link'], ['image', 'code-block', 'blockquote'], [{ 'list': 'ordered'}, { 'list': 'bullet' }],  [{ 'indent': '-1'}, { 'indent': '+1' }], [{ 'color': [] }, { 'background': [] }], [{ 'font': [] }], [{ 'align': [] }], ['clean']] }, placeholder: '※今のところ画像挿入はできないので注意', theme: 'snow'}}}
         
           f.actions
         end

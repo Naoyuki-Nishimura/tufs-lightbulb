@@ -1,0 +1,12 @@
+<% if @feedbacks.count == 0 %>
+    <%= "まだ投稿はありません。" %>
+<% else %>
+    <% @feedbacks.each do |feedback| %>
+            <ul class="collection">
+              <li class="collection-item valign-wrapper">  
+                  <%= image_tag "logo.jpg", class: "circle responsive-img", size: "30x30", style: "margin-right:10px" %>
+                  <%= feedback.description %>
+              </li>
+            </ul>
+    <% end %>
+<% end %>
