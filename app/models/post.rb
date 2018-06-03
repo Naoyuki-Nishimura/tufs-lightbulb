@@ -16,7 +16,7 @@ class Post < ActiveRecord::Base
   has_many :feedbacks
   
   
-  validates :title, :content, :user_id, :stauts, presence: true 
+  validates :title, :content, :user_id, :status, presence: true 
   
   enum status: {inactive: 0, active: 1}
   
