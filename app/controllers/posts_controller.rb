@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     before_action :find_post, only: [:show, :edit, :update, :destroy]
     
     def index
-        @posts = Post.all.order(created_at: :desc)
+        @posts = Post.all.check_active.order(created_at: :desc)
         @pdfs = Dir.glob(Rails.root.join('public/pdf', '*.pdf'))
     end
     

@@ -2,12 +2,13 @@ ActiveAdmin.register Post do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :title, :content, :user_id
+permit_params :title, :content, :user_id, :status
 
 
 index do
     selectable_column
     id_column
+    column :status
     column :user
     column :title
     column :created_at
@@ -19,6 +20,7 @@ end
 
     form do |f|
         f.inputs 'ブログ' do
+          f.input :status
           f.input :user
           f.input :title
           f.input :content, as: :quill_editor, input_html: {
