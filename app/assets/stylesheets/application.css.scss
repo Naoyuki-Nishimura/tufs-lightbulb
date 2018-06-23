@@ -111,3 +111,23 @@ flex: 1 0 auto;
     }
 }
 
+
+#preloader {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#status {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url('preloader.gif');
+    width: 200px;
+    height: 200px;
+    margin-left: 570px;
+    margin-top: 180px;
+}
