@@ -122,12 +122,30 @@ flex: 1 0 auto;
     z-index: 9999;
 }
 
-#status {
-    position: absolute;
-    background-repeat: no-repeat;
-    background: image-url("preloader.gif");
-    width: 200px;
-    height: 200px;
-    margin-left: 570px;
-    margin-top: 180px;
+@media screen and (max-width: 480px) {
+    #status {
+        position: absolute;
+        background-repeat: no-repeat;
+        background: image-url("preloader.gif");
+        /*background-imageではなく、backgroundにする asset pipelineの問題 */
+        width: 200px;
+        height: 200px;
+        margin-left: 90px;
+        margin-top: 130px;
+    }
+    
 }
+
+@media screen and (min-width: 781px) {
+    #status {
+        position: absolute;
+        background-repeat: no-repeat;
+        background: image-url("preloader.gif");
+        /*background-imageではなく、backgroundにする asset pipelineの問題 */
+        width: 200px;
+        height: 200px;
+        margin-left: 570px;
+        margin-top: 180px;
+    }
+}
+
