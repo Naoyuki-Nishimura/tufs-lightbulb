@@ -2,11 +2,12 @@ ActiveAdmin.register Interview do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-    permit_params :name, :pdf
+    permit_params :name, :pdf, :status
     
     index do
         selectable_column
         id_column
+        column :status
         column :name
         column :created_at
         column :updated_at
