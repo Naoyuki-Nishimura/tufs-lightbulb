@@ -26,5 +26,8 @@ class Interview < ActiveRecord::Base
       :s3_host_name => 's3-ap-northeast-1.amazonaws.com'
       validates_attachment :pdf, :content_type => { :content_type => %w(application/pdf application/msword) }
    
+   
+   enum status: {inactive: 0, active: 1}
+   scope :check_active, -> { where(status: 1) }
 end
 
