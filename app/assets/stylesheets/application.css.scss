@@ -15,6 +15,20 @@
  
 @import "toastr";
 
+@media screen and (min-width: 781px) {
+/* headerを固定する */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+    
+    main {
+     margin-top: 64px;   
+    }
+
+}
 
 
 body {
@@ -145,7 +159,12 @@ flex: 1 0 auto;
         width: 200px;
         height: 200px;
         margin-left: 570px;
-        margin-top: 180px;
+        margin-top: 210px;
     }
+    
+}
+
+#int-hover:hover {
+    background-color: yellow!important;
 }
 
