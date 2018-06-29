@@ -19,6 +19,7 @@ ActiveAdmin.register Interview do
 
 form do |f|
     f.inputs 'インタビュー記事作成記事' do
+        f.input :status
         f.input :name
         f.input :pdf
        
