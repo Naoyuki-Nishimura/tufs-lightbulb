@@ -43,6 +43,16 @@ ActiveAdmin.register_page "Dashboard" do
           end
         end
        
+        column do
+          panel "レビュー" do
+            ul do
+              Feedback.all.each do |feed|
+                li link_to(feed.description, admin_feedback_path(feed))
+              end
+            end
+          end
+        end
+       
      end
 
     #   column do
